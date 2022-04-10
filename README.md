@@ -1,6 +1,6 @@
 # transmission role
 
-[![CI](https://github.com/coaxial/ansible-role-nzbget/actions/workflows/ci.yml/badge.svg)](https://github.com/coaxial/ansible-role-transmission/actions/workflows/ci.yml)
+[![CI](https://github.com/coaxial/ansible-role-transmission/actions/workflows/ci.yml/badge.svg)](https://github.com/coaxial/ansible-role-transmission/actions/workflows/ci.yml)
 
 Galaxy: https://galaxy.ansible.com/coaxial/transmission
 
