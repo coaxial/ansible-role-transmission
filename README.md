@@ -6,9 +6,7 @@ Galaxy: https://galaxy.ansible.com/coaxial/transmission
 
 ## Variables and their defaults
 
-| variable name             | default value  | description                                                                             |
-| ------------------------- | -------------- | --------------------------------------------------------------------------------------- |
-| transmission\_\_username  | `transmission` | Username under which to run Transmission                                                |
-| transmission\_\_password  | `!` (disabled) | Transmission user's password                                                            |
-| transmission\_\_group     | `media`        | Transmission user's group                                                               |
-| transmission\_\_use_nginx | `yes`          | Whether to install and configure nginx (`no` if you're installing/managing it yourself) |
+| variable name             | default value | description                                                                             |
+| ------------------------- | ------------- | --------------------------------------------------------------------------------------- |
+| transmission\_\_group     | `media`       | Transmission user's group                                                               |
+| transmission\_\_use_nginx | `yes`         | Whether to install and configure nginx (`no` if you're installing/managing it yourself) |

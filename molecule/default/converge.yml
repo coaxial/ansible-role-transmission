@@ -5,3 +5,8 @@
     - name: "Include coaxial.transmission"
       ansible.builtin.include_role:
         name: "coaxial.transmission"
+
+    - name: Install curl (tests requirement)
+      ansible.builtin.package:
+        name: curl
+        state: present

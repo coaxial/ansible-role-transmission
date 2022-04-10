@@ -6,7 +6,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
-def test_nzbget_service(host):
+def test_transmission_service(host):
     s = host.service('transmission-daemon')
 
     assert s.is_enabled
@@ -14,9 +14,10 @@ def test_nzbget_service(host):
     assert s.systemd_properties['User'] != 'root'
 
 
-def test_nzbget_http(host):
+def test_transmission_http(host):
     # ZNBGet has user nzbget with password tegbzn6789 set by default
-    html = host.run('curl http://transmission:transmission@localhost/transmission').stdout
+    html = host.run(
+        'curl http://transmission:transmission@localhost/transmission').stdout
 
     assert 'Transmission' in html
 
@@ -34,3 +35,9 @@ def test_firewall(host):
         '-m conntrack --ctstate ESTABLISHED '
         '-m comment --comment "Allow HTTP traffic" -j ACCEPT'
     ) in i.rules('filter', 'OUTPUT')
+
+
+def test_user(host):
+    u = host.user('debian-transmission')
+
+    assert 'media' in u.groups
