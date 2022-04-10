@@ -3,8 +3,8 @@ galaxy_info:
   namespace: coaxial
   description: Role description
   # search and replace role name:
-  # `find . -type f -not -path './.git/*' -exec sed -i 's/myrole/actual-role-name/g' {} +`
-  role_name: myrole
+  # `find . -type f -not -path './.git/*' -exec sed -i 's/transmission/actual-role-name/g' {} +`
+  role_name: transmission
 
   license: MIT
 
