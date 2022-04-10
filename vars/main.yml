@@ -1,2 +1,2 @@
 ---
-# vars file for transmission
+nginx_logrotate_conf_enable: true

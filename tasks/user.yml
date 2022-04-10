@@ -1,0 +1,15 @@
+---
+- name: "Create {{ transmission__group }} group"
+  ansible.builtin.group:
+    name: "{{ transmission__group }}"
+    state: present
+
+- name: "Create {{ transmission__username }} user"
+  ansible.builtin.user:
+    name: "{{ transmission__username }}"
+    password: "{{ transmission__password }}"
+    groups:
+      - "{{ transmission__group }}"
+    append: yes
+    shell: /usr/bin/env nologin
+    state: present

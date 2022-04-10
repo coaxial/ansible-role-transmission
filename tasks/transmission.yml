@@ -1,0 +1,11 @@
+---
+- name: Install Transmission
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - transmission-cli
+    - transmission-daemon
+    - transmission-common
+  notify:
+    - Restart Transmission
