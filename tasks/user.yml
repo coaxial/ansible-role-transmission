@@ -1,0 +1,13 @@
+---
+- name: "Create {{ transmission__group }} group"
+  ansible.builtin.group:
+    name: "{{ transmission__group }}"
+    state: present
+
+- name: "Create {{ transmission__username }} user"
+  ansible.builtin.user:
+    name: debian-transmission
+    groups:
+      - "{{ transmission__group }}"
+    append: yes
+    state: present

@@ -1,10 +1,8 @@
 galaxy_info:
   author: coaxial
   namespace: coaxial
-  description: Role description
-  # search and replace role name:
-  # `find . -type f -not -path './.git/*' -exec sed -i 's/myrole/actual-role-name/g' {} +`
-  role_name: myrole
+  description: Install Transmission and optionally configure nginx
+  role_name: transmission
 
   license: MIT
 
@@ -16,6 +14,6 @@ galaxy_info:
         - focal
         - bionic
 
-  galaxy_tags: []
+  galaxy_tags: [transmission, servarr]
 
 dependencies: []

@@ -1,4 +1,14 @@
 ---
-- name: Molecule Hello World!
-  ansible.builtin.debug:
-    msg: Hello, World!
+- name: Refresh apt cache
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 216000 # seconds; i.e. 1 day
+
+- name: Gather facts # to determine distribution etc.
+  ansible.builtin.setup:
+
+- include_tasks: user.yml
+- include_tasks: nginx.yml
+  when: transmission__use_nginx
+- include_tasks: firewall.yml
+- include_tasks: transmission.yml
