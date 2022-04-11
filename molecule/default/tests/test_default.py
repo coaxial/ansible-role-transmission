@@ -17,7 +17,8 @@ def test_transmission_service(host):
 def test_transmission_http(host):
     # ZNBGet has user nzbget with password tegbzn6789 set by default
     html = host.run(
-        'curl -L http://transmission:transmission@localhost/transmission').stdout
+        'curl -L http://transmission:transmission@localhost/transmission'
+    ).stdout
 
     assert 'Transmission' in html
 
@@ -25,7 +26,8 @@ def test_transmission_http(host):
 def test_transmission_base_url(host):
     # ZNBGet has user nzbget with password tegbzn6789 set by default
     html = host.run(
-        'curl -li http://transmission:transmission@localhost/transmission').stdout
+        'curl -li http://transmission:transmission@localhost/transmission'
+    ).stdout
 
     assert 'Location: /transmission/web/' in html
 
