@@ -16,4 +16,4 @@ galaxy_info:
 
   galaxy_tags: [transmission, servarr]
 
-dependencies: []
+dependencies: [nginxinc.nginx]
