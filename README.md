@@ -9,4 +9,5 @@ Galaxy: https://galaxy.ansible.com/coaxial/transmission
 | variable name             | default value | description                                                                             |
 | ------------------------- | ------------- | --------------------------------------------------------------------------------------- |
 | transmission\_\_group     | `media`       | Transmission user's group                                                               |
+| transmission\_\_group_id  | `1100`        | Transmission user's group GID                                                           |
 | transmission\_\_use_nginx | `yes`         | Whether to install and configure nginx (`no` if you're installing/managing it yourself) |

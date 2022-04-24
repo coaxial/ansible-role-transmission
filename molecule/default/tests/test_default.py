@@ -51,3 +51,9 @@ def test_user(host):
     u = host.user('debian-transmission')
 
     assert 'media' in u.groups
+
+
+def test_group(host):
+    g = host.group('media')
+
+    assert g.gid == 1100

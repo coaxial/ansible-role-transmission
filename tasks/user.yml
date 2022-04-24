@@ -2,6 +2,7 @@
 - name: "Create {{ transmission__group }} group"
   ansible.builtin.group:
     name: "{{ transmission__group }}"
+    gid: "{{ transmission__group_id }}"
     state: present
 
 - name: "Create {{ transmission__username }} user"
