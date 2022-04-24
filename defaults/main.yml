@@ -2,4 +2,5 @@
 transmission__username: transmission
 transmission__password: "!" # password disabled
 transmission__group: media
+transmission__group_id: 1100
 transmission__use_nginx: yes
